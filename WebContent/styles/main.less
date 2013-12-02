@@ -1,0 +1,87 @@
+@import "lib.less";
+@import "common.less";
+
+.form-btn-group
+{
+	margin:0 auto;
+}
+
+.nav-user-op
+{
+	margin-top: 8px;
+}
+
+.with-dec
+{
+	position: relative;
+}
+
+.dec-tr
+{
+	position: absolute;
+	right: 1px;
+	top: 1px;
+}
+
+.navbar-main
+{
+	box-shadow: #000 0 0 15px;
+	
+	padding-left: 120px;
+	padding-right: 120px;
+}
+
+.container-main
+{
+	width: 720px;
+	height: auto !important;
+	min-height: 100%;
+	margin-top: 51px;
+	background: #f8f8f8;
+	border: #333 4px solid;
+	border-top: none;
+	border-bottom: none;
+	box-shadow: 0 0 20px;
+}
+
+// 頁面寬度設置
+@media (min-width: 1200px) 
+{
+    .container-main
+    {
+        width: 720px;
+    }
+    .navbar-main
+    {
+    	padding-left: 120px;
+		padding-right: 120px;
+    }
+}
+
+.section-header
+{
+	h1,h2,h3
+	{
+		font-weight: bold;
+		text-align: center;
+	}
+}
+.page-part
+{
+	padding-bottom: 20px;
+}
+.narrow-part
+{
+	width: 460px;
+	padding: 0 50px;
+	margin: 0 auto;
+}
+
+#profile-page
+{
+	.editable ~ .editable-container{margin-left: 20px;}
+}
+.blog-container
+{
+	min-height: 250px;
+}
