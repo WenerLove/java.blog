@@ -1,26 +1,26 @@
-java.blog
+ï»¿java.blog
 =========
 
-ÎÒµÄ×÷Òµ,Ê¹ÓÃ jsp ÊµÏÖµÄ¼òµ¥µÄ²©¿Í.
+æˆ‘çš„ä½œä¸š,ä½¿ç”¨ jsp å®ç°çš„ç®€å•çš„åšå®¢.
 
-¹ØÓÚ´î½¨
+å…³äºæ­å»º
 -------
 
-Êı¾İ¿âÊ¹ÓÃµÄ h2,Á¬½Ó URL ÔÚ U5.java Àï,´î½¨µÄÊ±ºò¸ù¾İĞèÒªĞŞ¸Ä¸ÃÁ¬½Ó.
+æ•°æ®åº“ä½¿ç”¨çš„ h2,è¿æ¥ URL åœ¨ U5.java é‡Œ,æ­å»ºçš„æ—¶å€™æ ¹æ®éœ€è¦ä¿®æ”¹è¯¥è¿æ¥.
 
-µ±Ç°ÊÇ `jdbc:h2:tcp://localhost/~test`,Ê¹ÓÃµÄ·şÎñÆ÷Ä£Ê½.
+å½“å‰æ˜¯ `jdbc:h2:tcp://localhost/~test`,ä½¿ç”¨çš„æœåŠ¡å™¨æ¨¡å¼.
 
-ĞŞ¸ÄÎª `jdbc:h2:test` Ôò»áÊ¹ÓÃÇ¶ÈëÊ½Ä£Ê½.Êı¾İ±í»á×Ô¶¯´´½¨.
+ä¿®æ”¹ä¸º `jdbc:h2:test` åˆ™ä¼šä½¿ç”¨åµŒå…¥å¼æ¨¡å¼.æ•°æ®è¡¨ä¼šè‡ªåŠ¨åˆ›å»º.
 
 
-½ØÍ¼
+æˆªå›¾
 ----
 
-![Ê×Ò³½ØÍ¼](https://raw.github.com/WenerLove/java.blog/master/index_screenshot.png)
+![é¦–é¡µæˆªå›¾](https://raw.github.com/WenerLove/java.blog/master/index_screenshot.png)
 
-![µÇÂ¼ºÍ×¢²á½ØÍ¼](https://raw.github.com/WenerLove/java.blog/master/login_screenshot.png)
+![ç™»å½•å’Œæ³¨å†Œæˆªå›¾](https://raw.github.com/WenerLove/java.blog/master/login_screenshot.png)
 
-Ê¹ÓÃÁË
+ä½¿ç”¨äº†
 ------
 
 * [bootstrap](http://getbootstrap.com/)
@@ -33,7 +33,12 @@ java.blog
 * json3
 * [x-editable](http://vitalets.github.io/x-editable/)
 
-×¢Òâ
+æ³¨æ„
 ----
 
-* generate.jsp ÊÇÓÃÓÚÉú³É²âÊÔÊı¾İµÄ
+* generate.jsp æ˜¯ç”¨äºç”Ÿæˆæµ‹è¯•æ•°æ®çš„
+
+TODO
+----
+
+* ä¿®æ”¹æ•°æ®è¿æ¥çš„è·å–æ–¹å¼,å°†è¿æ¥ä¿å­˜åˆ° `application` ä¸Š,ä»¥æ”¯æŒåµŒå…¥å¼æ¨¡å¼,åªè¿›è¡Œä¸€æ¬¡è¿æ¥
