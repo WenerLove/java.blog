@@ -32,3 +32,8 @@ java.blog
 * [less](http://lesscss.org/)
 * jspn3
 * [x-editable](http://vitalets.github.io/x-editable/)
+
+注意
+----
+
+* generate.jsp 是用于生成测试数据的
