@@ -30,7 +30,7 @@ java.blog
 * [font awesome](http://fontawesome.io/)
 * jstl,servlet
 * [less](http://lesscss.org/)
-* jspn3
+* json3
 * [x-editable](http://vitalets.github.io/x-editable/)
 
 зЂвт
