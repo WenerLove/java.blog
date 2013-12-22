@@ -1,7 +1,23 @@
-﻿java.blog
+<!-- title: 我的JSP作业, 简单的博客 -->
+<!-- category: Web -->
+<!-- tag: java, jsp -->
+<!-- date: 2013/12/2 -->
+<!-- state: published -->
+<!-- link: java.blog -->
+﻿
+java.blog
 =========
 
 我的作业,使用 jsp 实现的简单的博客.
+
+截图
+----
+
+![首页截图](https://raw.github.com/WenerLove/java.blog/master/index_screenshot.png)
+
+![登录和注册截图](https://raw.github.com/WenerLove/java.blog/master/login_screenshot.png)
+
+<!-- more -->
 
 关于搭建
 -------
@@ -12,13 +28,6 @@
 
 修改为 `jdbc:h2:test` 则会使用嵌入式模式.数据表会自动创建.
 
-
-截图
-----
-
-![首页截图](https://raw.github.com/WenerLove/java.blog/master/index_screenshot.png)
-
-![登录和注册截图](https://raw.github.com/WenerLove/java.blog/master/login_screenshot.png)
 
 使用了
 ------
