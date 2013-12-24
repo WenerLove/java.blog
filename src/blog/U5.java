@@ -32,8 +32,9 @@ import java.net.URLDecoder;
  */
 public class U5 {
 	public final static String DEFAULT_DATE_FORMAT = "yyyy-MM-dd hh:mm";
-	private final static String DATABASE_URL = "jdbc:h2:tcp://localhost/~/test";
-	private final static String DATABASE_USER = "";
+	// private final static String DATABASE_URL = "jdbc:h2:tcp://localhost/~/test"; // server
+	private final static String DATABASE_URL = "jdbc:h2:C:/blog";
+	private final static String DATABASE_USER = "sa";
 	private final static String DATABASE_PASSWORD = "";
 
 	private static Dao<Article, Integer> articleDao;
