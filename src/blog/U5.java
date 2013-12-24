@@ -33,6 +33,8 @@ import java.net.URLDecoder;
 public class U5 {
 	public final static String DEFAULT_DATE_FORMAT = "yyyy-MM-dd hh:mm";
 	private final static String DATABASE_URL = "jdbc:h2:tcp://localhost/~/test";
+	private final static String DATABASE_USER = "";
+	private final static String DATABASE_PASSWORD = "";
 
 	private static Dao<Article, Integer> articleDao;
 	private static Dao<User, Integer> userDao;
@@ -59,39 +61,60 @@ public class U5 {
 			e.printStackTrace();
 		}
 
+		connectionSource = getConnectionSource();
+		
+		InitDatabase();
+	}
+
+	public ConnectionSource getConnectionSource()
+	{
 		if (connectionSource == null)
 			connectionSource = (ConnectionSource) application
 					.getAttribute("connectionSource");
-
-		if (connectionSource == null) {
-			InitDatabase();
-			application.setAttribute("connectionSource", connectionSource);
+		
+		if (connectionSource == null)
+		{
+			try
+			{
+				connectionSource = new JdbcConnectionSource(DATABASE_URL, DATABASE_USER, DATABASE_PASSWORD);
+			} catch (SQLException e)
+			{
+				System.out.println("getConnectionSource FAILED.");
+				e.printStackTrace();
+			}
 		}
-
+		
+		application.setAttribute("connectionSource", connectionSource);
+		
+		return connectionSource;
 	}
 
 	public void InitDatabase() {
+		
+		try {
+			TableUtils.createTableIfNotExists(connectionSource, Article.class);
+			TableUtils.createTableIfNotExists(connectionSource, Comment.class);
+			TableUtils.createTableIfNotExists(connectionSource, User.class);
+		} catch (SQLException e) {
+			// 这里不会因为 table 存在抛出错误
+			return;
+		}
+		
 		// create our data-source for the database
 		try {
-			connectionSource = new JdbcConnectionSource(DATABASE_URL, "sa", "");
-
+			
 			articleDao = DaoManager.createDao(connectionSource, Article.class);
 			commentDao = DaoManager.createDao(connectionSource, Comment.class);
 			userDao = DaoManager.createDao(connectionSource, User.class);
-
+			
+			if (userDao.countOf() > 0 || articleDao.countOf() > 0)
+			{
+				return;
+			}
 		} catch (SQLException e) {
-
 			e.printStackTrace();
 		}
 
-		try {
-			TableUtils.createTable(connectionSource, Article.class);
-			TableUtils.createTable(connectionSource, Comment.class);
-			TableUtils.createTable(connectionSource, User.class);
-		} catch (SQLException e) {
-			// 如果有抛出错误,则说明数据库已经存在,不再执行下面的初始
-			return;
-		}
 
 		// 添加一个默认用户
 		User user = new User();
