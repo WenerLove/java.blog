@@ -12,6 +12,18 @@
 	}catch(NullPointerException ex){}// by 可能不存在
 	catch(IllegalArgumentException ex){}// enum 可能找不到
 %>
+
+<c:if test="${!u5.isLogin()}">
+<div class="jumbotron">
+    <h1>欢迎来到 博客缘</h1>
+    <p> 博客缘  是一个基于 JSP+H2 的博客系统。</p>
+    <p>
+        <a class="btn btn-primary btn-large" href="login.jsp">登录</a>
+        <a class="btn btn-large" href="login.jsp?register">立即注册</a>
+    </p>
+</div>
+</c:if>
+
 <div id="error-msg-modal" class="modal fade">
   <div class="modal-dialog">
     <div class="modal-content">

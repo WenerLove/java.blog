@@ -26,7 +26,7 @@
 		<!-- Brand -->
 		<div class="navbar-header">
 			<a class="navbar-brand" href="index.jsp"><i class="fa fa-home"></i>
-				博客园</a>
+				博客缘</a>
 		</div>
 
 		<ul class="nav navbar-nav">

@@ -2,7 +2,12 @@
 
 </div>
 
-
-
+<footer>
+    <div class="container container-main">
+        <p>&copy; <a href="http://wener.me/" target="_blank">wener</a> 2014</p>
+    </div>
+</footer>
+<!-- /Footer -->
+        
 </body>
 </html>
