@@ -213,7 +213,7 @@ public class U5 {
 
 	public void sendError(ErrorMessage msg) {
 		try {
-			response.sendRedirect("error.jsp?msg=" + msg.toString());
+			response.sendRedirect("index.jsp?msg=" + msg.toString());
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
