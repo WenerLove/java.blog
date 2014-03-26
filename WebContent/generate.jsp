@@ -4,9 +4,6 @@
 <%@ page import="java.util.*" %>
 <%@ page import="blog.*" %>
 <%@ include file="conn/conn.jsp" %>
-<jsp:useBean id="test" class="blog.TestBean" />
-
-
 <pre>
 <%
 	Article article;

@@ -8,24 +8,16 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import org.apache.taglibs.standard.lang.jstl.test.StaticFunctionTests;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
-
-import java.net.URLDecoder;
 
 /**
  * 辅助函数
@@ -98,6 +90,7 @@ public class U5 {
 			TableUtils.createTableIfNotExists(connectionSource, User.class);
 		} catch (SQLException e) {
 			// 这里不会因为 table 存在抛出错误
+			e.printStackTrace();
 			return;
 		}
 		
