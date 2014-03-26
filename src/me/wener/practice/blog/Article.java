@@ -1,6 +1,8 @@
-package blog;
+package me.wener.practice.blog;
 
 import java.util.Date;
+
+import lombok.Getter;
 
 import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
@@ -15,16 +17,21 @@ public class Article
 	public final static String FIELD_AUTHOR = "author";
 	public final static String FIELD_PUBTIME = "pubtime";
 	
-	@DatabaseField(columnName=FIELD_ID, generatedId = true, readOnly=true, dataType = DataType.INTEGER)
+	@DatabaseField(columnName=FIELD_ID, generatedId = true, readOnly=true)
+	@Getter
 	private int id;
 
 	@DatabaseField(columnName=FIELD_TITLE)
+	@Getter
 	private String title;
 	@DatabaseField(columnName=FIELD_CONTENT, dataType = DataType.LONG_STRING)
+	@Getter
 	private String content;
 	@DatabaseField(columnName=FIELD_AUTHOR)
+	@Getter
 	private String author;
 	@DatabaseField(columnName=FIELD_PUBTIME,dataType=DataType.DATE_LONG)
+	@Getter
 	private Date pubtime;
 
 	public Article()
@@ -32,37 +39,17 @@ public class Article
 		pubtime = new Date();
 		
 	}
-	
-	public int getId() {
-		return id;
-	}
-
-	public String getTitle() {
-		return title;
-	}
 
 	public void setTitle(String title) {
 		this.title = title;
-	}
-
-	public String getContent() {
-		return content;
 	}
 
 	public void setContent(String content) {
 		this.content = content;
 	}
 
-	public String getAuthor() {
-		return author;
-	}
-
 	public void setAuthor(String author) {
 		this.author = author;
-	}
-
-	public Date getPubtime() {
-		return pubtime;
 	}
 
 	public void setPubtime(Date pubtime) {

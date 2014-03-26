@@ -1,4 +1,4 @@
-package blog;
+package me.wener.practice.blog;
 
 public enum UserSearchBy
 {
@@ -6,7 +6,7 @@ public enum UserSearchBy
 	REALNAME(User.FIELD_REALNAME), 
 	EMAIL(User.FIELD_EMAIL), 
 	QQ(User.FIELD_QQ),
-	SEX(User.FIELD_SEX)
+	SEX(User.FIELD_GENDER)
 	;
 	
 	String columnName;

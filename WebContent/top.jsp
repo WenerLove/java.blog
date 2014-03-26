@@ -37,22 +37,20 @@
 				<li><a href="article_list.jsp"><i class="fa fa-files-o"></i>
 						阅览文章</a></li>
 
-				<li class="dropdown">
-					<a data-toggle="dropdown" class="dropdown-toggle" data-toggle="dropdown" href="#">
-						<i class="fa fa-gear"></i> 设置<span class="caret"></span>
-					</a>
+				<li class="dropdown"><a data-toggle="dropdown"
+					class="dropdown-toggle" data-toggle="dropdown" href="#"> <i
+						class="fa fa-gear"></i> 设置<span class="caret"></span>
+				</a>
 					<ul class="dropdown-menu" role="menu">
-						
-						<li><a href="profile.jsp?id=<c:out value="${u5.getCurrentUser().getId()}" />">
-						<i class="fa fa-user"></i>
-								个人信息</a>
-						</li>
-						
+
+						<li><a
+							href="profile.jsp?id=<c:out value="${u5.getCurrentUser().getId()}" />">
+								<i class="fa fa-user"></i> 个人信息
+						</a></li>
+
 						<li><a href="update_pwd.jsp"><i class="fa fa-certificate"></i>
-								修改密码</a>
-						</li>
-					</ul>
-				</li>
+								修改密码</a></li>
+					</ul></li>
 			</c:if>
 
 			<c:if test="${u5.isAdministrator()}">

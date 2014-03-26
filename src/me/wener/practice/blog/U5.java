@@ -1,4 +1,4 @@
-package blog;
+package me.wener.practice.blog;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -8,10 +8,13 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import lombok.val;
 
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
@@ -111,12 +114,19 @@ public class U5 {
 
 
 		// 添加一个默认用户
+		
 		User user = new User();
 		user.setAccount("admin");
 		user.setPassword("admin");
 		user.setIp(request.getRemoteAddr());
 		user.setLevel(AccountLevel.Administrator);
-		
+		/*
+		User user = User.builder()
+				.password("admin")
+				.account("admin")
+				.level(AccountLevel.Administrator)
+				.build();
+		*/
 		try {
 			userDao.create(user);
 		} catch (SQLException e) {

@@ -1,7 +1,7 @@
 <%@page import="com.j256.ormlite.dao.Dao"%>
 <%@ page language="java" pageEncoding="UTF-8" import="java.sql.*" errorPage=""%>
 <%@ page import="java.io.PrintWriter"%>
-<%@ page import="blog.*" %>
+<%@ page import="me.wener.practice.blog.*" %>
 
 
 <%

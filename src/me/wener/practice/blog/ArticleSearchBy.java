@@ -1,4 +1,4 @@
-package blog;
+package me.wener.practice.blog;
 
 public enum ArticleSearchBy {
 	TITLE(Article.FIELD_TITLE),

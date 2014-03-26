@@ -1,12 +1,18 @@
-package blog;
+package me.wener.practice.blog;
 
 import java.util.Date;
+
+import lombok.Getter;
+import lombok.ToString;
+import lombok.experimental.Builder;
 
 import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
 @DatabaseTable(tableName = "user")
+
+@ToString
 public class User
 {
 
@@ -17,79 +23,76 @@ public class User
 	public final static String FIELD_BIRTHDAY = "birthday";
 	public final static String FIELD_QQ = "qq";
 	public final static String FIELD_EMAIL = "email";
-	public final static String FIELD_SEX = "sex";
+	public final static String FIELD_GENDER = "gender";
 	public final static String FIELD_HOMEPAGE = "homepage";
 	public final static String FIELD_INTRODUCE = "introduce";
 	public final static String FIELD_SIGN = "sign";
-	public final static String FIELD_IP = "ip";
-	public final static String FIELD_LEVEL = "level";
-	public final static String FIELD_REGTIME = "regtime";
-	
+	public final static String FIELD_IP = "last_signin_ip";
+	public final static String FIELD_LEVEL = "account_level";
+	public final static String FIELD_REGTIME = "regiter_date";
+
 	@DatabaseField(columnName = FIELD_ID, generatedId = true, readOnly = true)
+	@Getter
 	private int id;
 
-	@DatabaseField(columnName = FIELD_ACCOUNT, canBeNull = false, unique = true, uniqueIndex = true)
+	@DatabaseField(columnName = FIELD_ACCOUNT, canBeNull = false,
+			unique = true, uniqueIndex = true)
+	@Getter
 	private String account;
 
 	@DatabaseField(columnName = FIELD_PASSWORD, canBeNull = false)
+	@Getter
 	private String password;
 
 	@DatabaseField(columnName = FIELD_QQ, defaultValue = "")
+	@Getter
 	private String qq;
 
 	@DatabaseField(columnName = FIELD_EMAIL, defaultValue = "")
+	@Getter
 	private String email;
 
-	@DatabaseField(columnName = FIELD_SEX, defaultValue = "")
+	@DatabaseField(columnName = FIELD_GENDER, defaultValue = "")
+	@Getter
 	private String sex;
 
 	@DatabaseField(columnName = FIELD_HOMEPAGE, defaultValue = "")
+	@Getter
 	private String homePage;
 
 	@DatabaseField(columnName = FIELD_INTRODUCE, defaultValue = "")
+	@Getter
 	private String introduce;
 
 	@DatabaseField(columnName = FIELD_SIGN, defaultValue = "")
+	@Getter
 	private String sign;
 
 	@DatabaseField(columnName = FIELD_IP, defaultValue = "")
-	private String ip;
+	@Getter
+	private String lastSigninIP;
 
 	@DatabaseField(columnName = FIELD_REALNAME, defaultValue = "")
+	@Getter
 	private String realname;
-	
-
 
 	@DatabaseField(columnName = FIELD_LEVEL)
+	@Getter
 	private AccountLevel level;
 
 	@DatabaseField(columnName = FIELD_BIRTHDAY, dataType = DataType.DATE_LONG)
 	private Date birthday;
-	
+
 	@DatabaseField(columnName = FIELD_REGTIME, dataType = DataType.DATE_LONG)
-	private Date regtime;
-	
-	
+	private Date registerDate;
+
 	public User()
 	{
-		//birthday = new Date();
-		regtime = new Date();
-		level = AccountLevel.Normal;
 	}
-
-	public String getAccount()
-	{
-		return account;
-	}
-
+	
 	public void setAccount(String account)
 	{
 		this.account = account;
-	}
-
-	public String getPassword()
-	{
-		return password;
 	}
 
 	public void setPassword(String password)
@@ -97,19 +100,9 @@ public class User
 		this.password = password;
 	}
 
-	public String getQQ()
-	{
-		return qq;
-	}
-
 	public void setQQ(String qq)
 	{
 		this.qq = qq;
-	}
-
-	public String getEmail()
-	{
-		return email;
 	}
 
 	public void setEmail(String email)
@@ -117,19 +110,9 @@ public class User
 		this.email = email;
 	}
 
-	public String getSex()
-	{
-		return sex;
-	}
-
 	public void setSex(String sex)
 	{
 		this.sex = sex;
-	}
-
-	public String getHomePage()
-	{
-		return homePage;
 	}
 
 	public void setHomePage(String homePage)
@@ -137,19 +120,9 @@ public class User
 		this.homePage = homePage;
 	}
 
-	public String getIntroduce()
-	{
-		return introduce;
-	}
-
 	public void setIntroduce(String introduce)
 	{
 		this.introduce = introduce;
-	}
-
-	public String getSign()
-	{
-		return sign;
 	}
 
 	public void setSign(String sign)
@@ -157,19 +130,9 @@ public class User
 		this.sign = sign;
 	}
 
-	public String getIp()
-	{
-		return ip;
-	}
-
 	public void setIp(String ip)
 	{
-		this.ip = ip;
-	}
-
-	public AccountLevel getLevel()
-	{
-		return level;
+		lastSigninIP = ip;
 	}
 
 	public void setLevel(AccountLevel fig)
@@ -177,19 +140,9 @@ public class User
 		this.level = fig;
 	}
 
-	public Date getBirthday()
-	{
-		return birthday;
-	}
-
 	public void setBirthday(Date birthday)
 	{
 		this.birthday = birthday;
-	}
-
-	public int getId()
-	{
-		return id;
 	}
 
 	public int setId(int id)
@@ -197,18 +150,9 @@ public class User
 		return this.id = id;
 	}
 
-	public Date getRegtime()
-	{
-		return regtime;
-	}
-
 	public void setRegtime(Date regtime)
 	{
-		this.regtime = regtime;
-	}
-	public String getRealname()
-	{
-		return realname;
+		this.registerDate = regtime;
 	}
 
 	public void setRealname(String realname)
