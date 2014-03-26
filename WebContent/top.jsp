@@ -6,7 +6,7 @@
 <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%@ taglib prefix="x" uri="http://java.sun.com/jsp/jstl/xml"%>
 
-<%@ include file="conn/conn.jsp"%>
+<%@include file="/WEB-INF/conn.jsp"%>
 <%
 	request.setCharacterEncoding("UTF-8");
 %>
@@ -16,7 +16,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>博客园-</title>
-<%@include file="assets.html"%>
+<%@include file="/WEB-INF/assets.html"%>
 </head>
 
 <body>

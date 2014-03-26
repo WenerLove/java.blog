@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/json; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@include file="conn/conn.jsp" %>
+<%@include file="/WEB-INF/conn.jsp"%>
+
 <% 
 	boolean suc = false;
 	String error = "";
